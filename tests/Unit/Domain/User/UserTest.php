@@ -9,7 +9,6 @@ use PHPUnit\Framework\TestCase;
 
 final class UserTest extends TestCase
 {
-
     public function testCreate(): void
     {
         $id = UserStubs::id();

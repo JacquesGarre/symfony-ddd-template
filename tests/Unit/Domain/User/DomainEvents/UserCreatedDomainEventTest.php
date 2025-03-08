@@ -6,8 +6,8 @@ use App\Domain\User\DomainEvents\UserCreatedDomainEvent;
 use App\Tests\Stubs\Domain\User\UserStubs;
 use PHPUnit\Framework\TestCase;
 
-final class UserCreatedDomainEventTest extends TestCase {
-
+final class UserCreatedDomainEventTest extends TestCase
+{
     public function testDomainEvent(): void
     {
         $user = UserStubs::user();

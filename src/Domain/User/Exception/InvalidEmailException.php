@@ -4,4 +4,6 @@ namespace App\Domain\User\Exception;
 
 use Exception;
 
-final class InvalidEmailException extends Exception {}
+final class InvalidEmailException extends Exception
+{
+}

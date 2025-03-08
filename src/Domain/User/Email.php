@@ -4,8 +4,8 @@ namespace App\Domain\User;
 
 use App\Domain\User\Exception\InvalidEmailException;
 
-final class Email {
-
+final class Email
+{
     private function __construct(public readonly string $value)
     {
     }

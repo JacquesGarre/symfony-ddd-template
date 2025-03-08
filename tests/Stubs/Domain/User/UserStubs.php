@@ -30,8 +30,8 @@ final class UserStubs
     public static function user(): User
     {
         return User::create(
-            self::id(), 
-            self::email(), 
+            self::id(),
+            self::email(),
             self::passwordHash(),
         );
     }

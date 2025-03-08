@@ -5,8 +5,8 @@ namespace App\Domain\User;
 use App\Domain\User\Exception\PasswordTooWeakException;
 use App\Domain\User\Exception\WrongPasswordException;
 
-final class PasswordHash {
-
+final class PasswordHash
+{
     private const PASSWORD_STRENGTH_REGEX = '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{8,}$/';
 
     private function __construct(public readonly string $value)
@@ -29,11 +29,10 @@ final class PasswordHash {
     }
 
     public function matches(string $value): void
-    {   
+    {
         if (password_verify($value, $this->value)) {
             return;
         }
         throw new WrongPasswordException();
     }
-
 }

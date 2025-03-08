@@ -6,4 +6,6 @@ namespace App\Infrastructure\Shared\Exception;
 
 use Exception;
 
-final class InvalidRequestException extends Exception {}
+final class InvalidRequestException extends Exception
+{
+}

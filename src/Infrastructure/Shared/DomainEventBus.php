@@ -10,15 +10,15 @@ use Symfony\Component\Messenger\Exception\HandlerFailedException;
 use Symfony\Component\Messenger\MessageBusInterface;
 use Throwable;
 
-final class DomainEventBus implements DomainEventBusInterface {
-
+final class DomainEventBus implements DomainEventBusInterface
+{
     public function __construct(public readonly MessageBusInterface $messageBus)
     {
     }
 
     public function publish(DomainEventInterface ...$events): void
     {
-        foreach($events as $event) {
+        foreach ($events as $event) {
             try {
                 $this->messageBus->dispatch($event);
             } catch (HandlerFailedException $e) {

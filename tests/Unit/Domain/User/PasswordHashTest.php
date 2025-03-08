@@ -7,8 +7,8 @@ use App\Domain\User\Exception\PasswordTooWeakException;
 use App\Domain\User\Exception\WrongPasswordException;
 use PHPUnit\Framework\TestCase;
 
-final class PasswordHashTest extends TestCase {
-
+final class PasswordHashTest extends TestCase
+{
     public function testConstructor(): void
     {
         $value = "str0ngP@ssw0rD";

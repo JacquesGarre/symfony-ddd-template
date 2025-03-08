@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Infrastructure\API\v1\Controllers;
 
 use Symfony\Component\HttpKernel\Attribute\AsController;

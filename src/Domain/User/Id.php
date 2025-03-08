@@ -6,22 +6,22 @@ use App\Domain\User\Exception\InvalidIdException;
 use Ramsey\Uuid\Uuid;
 use Ramsey\Uuid\UuidInterface;
 
-final class Id {
-
+final class Id
+{
     private function __construct(public readonly UuidInterface $value)
     {
     }
 
     public static function fromString(string $value): self
-    {   
+    {
         self::assertValid($value);
         $uuid = Uuid::fromString($value);
         return new self($uuid);
     }
 
     public static function assertValid(string $value): void
-    {   
-        if(Uuid::isValid($value)) {
+    {
+        if (Uuid::isValid($value)) {
             return;
         }
         throw new InvalidIdException();

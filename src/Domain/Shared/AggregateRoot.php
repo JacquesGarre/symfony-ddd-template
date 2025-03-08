@@ -6,8 +6,8 @@ namespace App\Domain\Shared;
 
 use App\Domain\Shared\DomainEventInterface;
 
-abstract class AggregateRoot {
-
+abstract class AggregateRoot
+{
     /** @var DomainEventInterface[] */
     private $domainEvents = [];
 

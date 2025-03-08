@@ -5,8 +5,8 @@ namespace App\Domain\User\DomainEvents;
 use App\Domain\Shared\AbstractDomainEvent;
 use App\Domain\User\User;
 
-final class UserCreatedDomainEvent extends AbstractDomainEvent {
-
+final class UserCreatedDomainEvent extends AbstractDomainEvent
+{
     private const NAME = "UserCreatedDomainEvent";
 
     private function __construct(public readonly User $user)

@@ -8,15 +8,14 @@ use DateTimeImmutable;
 use Ramsey\Uuid\UuidInterface;
 use Ramsey\Uuid\Uuid;
 
-abstract class AbstractDomainEvent implements DomainEventInterface {
-
+abstract class AbstractDomainEvent implements DomainEventInterface
+{
     public readonly UuidInterface $eventId;
     public readonly DateTimeImmutable $occuredOn;
 
     public function __construct(
         public readonly UuidInterface $aggregateId,
-    )
-    {
+    ) {
         $this->eventId = Uuid::uuid4();
         $this->occuredOn = new DateTimeImmutable();
     }

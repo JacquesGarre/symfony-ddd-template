@@ -5,8 +5,8 @@ namespace App\Domain\User;
 use App\Domain\Shared\AggregateRoot;
 use App\Domain\User\DomainEvents\UserCreatedDomainEvent;
 
-final class User extends AggregateRoot {
-
+final class User extends AggregateRoot
+{
     private function __construct(
         public readonly Id $id,
         public readonly Email $email,

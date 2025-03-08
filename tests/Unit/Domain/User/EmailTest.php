@@ -7,8 +7,8 @@ use Faker\Factory;
 use App\Domain\User\Exception\InvalidEmailException;
 use PHPUnit\Framework\TestCase;
 
-final class EmailTest extends TestCase {
-
+final class EmailTest extends TestCase
+{
     public function testConstructor(): void
     {
         $faker = Factory::create();

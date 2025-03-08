@@ -7,8 +7,8 @@ use App\Domain\User\Id;
 use Faker\Factory;
 use PHPUnit\Framework\TestCase;
 
-final class IdTest extends TestCase {
-
+final class IdTest extends TestCase
+{
     public function testConstructor(): void
     {
         $faker = Factory::create();

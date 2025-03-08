@@ -23,12 +23,12 @@ class DatabaseHealthCheckController
         try {
             $this->connection->executeQuery('SELECT 1');
             return new JsonResponse(
-                ['status' => 'OK'], 
+                ['status' => 'OK'],
                 JsonResponse::HTTP_OK
             );
         } catch (\Exception $e) {
             return new JsonResponse(
-                ['status' => 'ERROR', 'message' => $e->getMessage()], 
+                ['status' => 'ERROR', 'message' => $e->getMessage()],
                 JsonResponse::HTTP_INTERNAL_SERVER_ERROR
             );
         }
