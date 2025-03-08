@@ -1,0 +1,3 @@
+# controllers:
+    #resource: '../src/Translation/Infrastructure/Controller'
+    #type: attribute

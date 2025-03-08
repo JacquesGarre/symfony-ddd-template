@@ -1,0 +1,18 @@
+framework:
+    messenger:
+        default_bus: command.bus
+        transports:
+            command_transport: 'sync://'
+            event_transport: 'sync://'
+        routing:
+            App\Shared\Command\Domain\AbstractCommand: command_transport
+            App\Shared\DomainEvent\Domain\DomainEventInterface: event_transport
+        buses:
+            default.bus:
+                default_middleware: allow_no_handlers
+            command.bus:
+                default_middleware: allow_no_handlers
+                middleware:
+                    - validation
+            event.bus:
+                default_middleware: allow_no_handlers

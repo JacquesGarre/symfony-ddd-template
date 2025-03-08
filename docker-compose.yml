@@ -1,0 +1,57 @@
+version: "3.8"
+services:
+
+  php:
+    container_name: php
+    build: 
+      context: ./
+      dockerfile: docker/php/Dockerfile
+    develop:
+      watch:
+        - action: sync
+          path: ./
+          target: /var/www/app
+    networks:
+      - app-network
+    depends_on:
+      - postgres
+
+  nginx:
+    container_name: nginx
+    build: ./docker/nginx
+    develop:
+      watch:
+        - action: sync
+          path: ./
+          target: /var/www/app
+    ports:
+      - "80:80"
+    volumes:
+      - ./docker/nginx/conf.d/:/etc/nginx/conf.d/
+    networks:
+      - app-network
+    depends_on:
+      - php
+
+  postgres:
+    container_name: postgres
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: database
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+volumes:
+  postgres-data:
+  volumes:
+ 
+
+networks:
+  app-network:
+    driver: bridge

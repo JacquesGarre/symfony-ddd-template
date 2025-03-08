@@ -1,0 +1,10 @@
+framework:
+    validation:
+        mapping:
+            paths:
+                # - '%kernel.project_dir%/src/Translation/Infrastructure/Validator/create_translation_command_validator.yaml'
+
+when@test:
+    framework:
+        validation:
+            not_compromised_password: false
