@@ -8,6 +8,7 @@ use App\Shared\DomainEvent\Domain\DomainEventBusInterface;
 use App\Shared\DomainEvent\Domain\DomainEventInterface;
 use Symfony\Component\Messenger\Exception\HandlerFailedException;
 use Symfony\Component\Messenger\MessageBusInterface;
+use Throwable;
 
 final class DomainEventBus implements DomainEventBusInterface {
 

@@ -8,13 +8,17 @@ use App\Shared\DomainEvent\Domain\DomainEventInterface;
 
 abstract class AggregateRoot {
 
+    /** @var DomainEventInterface[] */
     private $domainEvents = [];
 
-    public function notify(DomainEventInterface $event) 
+    public function notify(DomainEventInterface $event): void
     {
         $this->domainEvents[] = $event;
     }
 
+    /**
+     * @return DomainEventInterface[]
+     */
     public function pullDomainEvents(): array
     {
         return $this->domainEvents;

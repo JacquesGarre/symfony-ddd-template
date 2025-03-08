@@ -10,8 +10,11 @@ use Symfony\Component\Messenger\Exception\ValidationFailedException;
 
 class ExceptionListener
 {
+    /**
+     * @var array<class-string<\Throwable>, int>
+     */
     private array $exceptionMap = [
-        ValidationFailedException::class => JsonResponse::HTTP_BAD_REQUEST,
+           ValidationFailedException::class => JsonResponse::HTTP_BAD_REQUEST,
     ];
 
     public function __invoke(ExceptionEvent $event): void

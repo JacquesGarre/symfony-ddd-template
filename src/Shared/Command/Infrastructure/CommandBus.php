@@ -8,6 +8,7 @@ use App\Shared\Command\Domain\AbstractCommand;
 use App\Shared\Command\Domain\CommandBusInterface;
 use Symfony\Component\Messenger\Exception\HandlerFailedException;
 use Symfony\Component\Messenger\MessageBusInterface;
+use Throwable;
 
 final class CommandBus implements CommandBusInterface {
 
