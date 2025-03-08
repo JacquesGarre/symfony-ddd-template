@@ -35,6 +35,7 @@
     "config": {
         "allow-plugins": {
             "php-http/discovery": true,
+            "phpstan/extension-installer": true,
             "symfony/flex": true,
             "symfony/runtime": true
         },
@@ -83,6 +84,8 @@
         }
     },
     "require-dev": {
+        "phpat/phpat": "^0.11.4",
+        "phpstan/extension-installer": "^1.4",
         "phpstan/phpstan": "^2.1",
         "phpunit/phpunit": "11",
         "symfony/browser-kit": "7.0.*",

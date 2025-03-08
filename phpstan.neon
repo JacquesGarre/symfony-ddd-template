@@ -1,0 +1,5 @@
+services:
+    -
+        class: App\Tests\Architecture\ArchitectureTest
+        tags:
+            - phpat.test
