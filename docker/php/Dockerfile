@@ -18,7 +18,9 @@ WORKDIR /var/www/app
 
 
 RUN mkdir -p /var/www/.composer/cache && \
-    chown -R www-data:www-data /var/www/.composer
+    chown -R www-data:www-data /var/www/.composer && \
+    mkdir -p /var/www/app/var/log && \
+    chown -R www-data:www-data /var/www/app/var/log
 
 RUN chown -R www-data:www-data /var/www/app
 

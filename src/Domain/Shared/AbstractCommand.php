@@ -2,6 +2,6 @@
 
 declare(strict_types=1);
 
-namespace App\Shared\Domain;
+namespace App\Domain\Shared;
 
 abstract class AbstractCommand {}

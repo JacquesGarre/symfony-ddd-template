@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Shared\Infrastructure;
+namespace App\Infrastructure\Shared;
 
-use App\Shared\Domain\DomainEventBusInterface;
-use App\Shared\Domain\DomainEventInterface;
+use App\Domain\Shared\DomainEventBusInterface;
+use App\Domain\Shared\DomainEventInterface;
 use Symfony\Component\Messenger\Exception\HandlerFailedException;
 use Symfony\Component\Messenger\MessageBusInterface;
 use Throwable;

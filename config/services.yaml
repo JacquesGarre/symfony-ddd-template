@@ -20,9 +20,9 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
             
-    App\Shared\Exception\Infrastructure\ExceptionListener:
+    App\Infrastructure\Shared\ExceptionListener:
         tags: [kernel.event_listener]
 
-    App\Shared\Command\Domain\CommandBusInterface:
-        alias: App\Shared\Command\Infrastructure\CommandBus
+    App\Domain\Shared\CommandBusInterface:
+        alias: App\Infrastructure\Shared\CommandBus
         public: true
