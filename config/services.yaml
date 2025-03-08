@@ -19,6 +19,10 @@ services:
             - '../src/DependencyInjection/'
             - '../src/Entity/'
             - '../src/Kernel.php'
+
+    App\Infrastructure\API\v1\Controllers\:
+        resource: '../src/Infrastructure/API/v1/Controllers/'
+        tags: ['controller.service_arguments']
             
     App\Infrastructure\Shared\ExceptionListener:
         tags: [kernel.event_listener]

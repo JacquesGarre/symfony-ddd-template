@@ -1,4 +1,4 @@
-# Content management system
+# Symfony repository template 
 
 ### Requirements
 
@@ -9,5 +9,11 @@
 
 ### How to start
 
-- At the project root, run `sh ./start.sh` in your terminal
-- Run tests with `sh ./test.sh` in your terminal
+- In the top right corner, click "Use this template" > "Create new repository"
+- `git clone {your new repo}`
+- `cd {your new repo}`
+- `cp .env.example .env`
+- Make sure docker daemon is running locally
+- To start the project : run `sh ./start.sh` in your terminal
+- To run tests : run `sh ./test.sh` in your terminal
+- Access `http://localhost/api/v1/health-check` to check that everything is ok
