@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Shared\Exception\Infrastructure;
+namespace App\Shared\Infrastructure;
 
 use Symfony\Component\HttpKernel\Event\ExceptionEvent;
 use Symfony\Component\HttpFoundation\JsonResponse;

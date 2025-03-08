@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Shared\Command\Infrastructure;
+namespace App\Shared\Infrastructure;
 
-use App\Shared\Command\Domain\AbstractCommand;
-use App\Shared\Command\Domain\CommandBusInterface;
+use App\Shared\Domain\AbstractCommand;
+use App\Shared\Domain\CommandBusInterface;
 use Symfony\Component\Messenger\Exception\HandlerFailedException;
 use Symfony\Component\Messenger\MessageBusInterface;
 use Throwable;
