@@ -8,8 +8,8 @@ use App\Domain\User\PasswordHash;
 use App\Domain\User\User;
 use Faker\Factory;
 
-final class UserStubs {
-
+final class UserStubs
+{
     public static function id(): Id
     {
         $faker = Factory::create();
