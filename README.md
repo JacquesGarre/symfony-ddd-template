@@ -16,4 +16,4 @@
 - Make sure docker daemon is running locally
 - To start the project : run `sh ./start.sh` in your terminal
 - To run tests : run `sh ./test.sh` in your terminal
-- Access `http://localhost/api/v1/health-check` to check that everything is ok
+- Access `http://127.0.0.1/api/v1/health-check` to check that everything is ok

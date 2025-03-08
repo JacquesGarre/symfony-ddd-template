@@ -2,6 +2,8 @@
 
 composer install
 
+php bin/console c:c
+
 docker compose build
 docker compose up -d
 
