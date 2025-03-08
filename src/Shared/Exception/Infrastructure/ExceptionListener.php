@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Shared\Exception\Infrastructure;
 
-use App\Translation\Domain\Exception\TranslationNotFoundException;
 use Symfony\Component\HttpKernel\Event\ExceptionEvent;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Messenger\Exception\ValidationFailedException;
@@ -13,7 +12,6 @@ class ExceptionListener
 {
     private array $exceptionMap = [
         ValidationFailedException::class => JsonResponse::HTTP_BAD_REQUEST,
-        TranslationNotFoundException::class => JsonResponse::HTTP_NOT_FOUND,
     ];
 
     public function __invoke(ExceptionEvent $event): void
