@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 final class DummyTest extends TestCase
 {
-    public function dummy(): void
+    public function testDummy(): void
     {
         $this->expectNotToPerformAssertions();
     }
