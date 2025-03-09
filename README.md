@@ -18,3 +18,13 @@
 - To run tests : run `sh ./test.sh` in your terminal
 - Access `http://127.0.0.1/api/v1/health-check` to check that the api is up
 - Access `http://127.0.0.1/api/v1/db-health-check` to check that the database is up
+
+### Pipeline includes
+
+- Lint (PSR-12)
+- Static analysis
+- Architectural tests
+- Unit tests
+- Integration tests
+
+ 
