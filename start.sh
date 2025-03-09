@@ -21,6 +21,7 @@ docker compose build
 PHP_CONTAINER_NAME="php" 
 
 echo "🔄 Running Symfony commands in the container..."
+docker exec -it $PHP_CONTAINER_NAME composer install
 docker exec -it $PHP_CONTAINER_NAME php bin/console cache:clear
 docker exec -it $PHP_CONTAINER_NAME php bin/console cache:warmup
 docker exec -it $PHP_CONTAINER_NAME php bin/console doctrine:migrations:migrate --no-interaction
