@@ -4,7 +4,7 @@ services:
   php:
     container_name: php
     build: 
-      context: ./
+      context: .
       dockerfile: docker/php/Dockerfile
     develop:
       watch:
@@ -27,6 +27,7 @@ services:
     ports:
       - "80:80"
     volumes:
+      - .:/var/www/app 
       - ./docker/nginx/conf.d/:/etc/nginx/conf.d/
     networks:
       - app-network
