@@ -16,6 +16,7 @@ php bin/console cache:warmup
 # Build and start Docker containers
 echo "🚀 Building and starting containers..."
 docker compose build
+docker compose up -d
 
 # Run Symfony commands inside the PHP container
 PHP_CONTAINER_NAME="php" 
